@@ -1,0 +1,16 @@
+    <template>
+        <lightning-card title="Accounts Records" icon-name="custom:custom63">
+    
+            <div class="slds-m-around_medium">
+                <template if:true={accountList}>
+                   <lightning-datatable
+                   key-field="id"
+                   data={accountList}
+                   columns={columns}>
+                    </lightning-datatable>
+                </template>
+                <br/>
+                <c-paginator  onprevious={previousHandler2} onnext={nextHandler2} onselected={changeHandler2} onfirstpage={firstpagehandler} onlastpage={lastpagehandler}></c-paginator>
+            </div>
+        </lightning-card>
+</template>
